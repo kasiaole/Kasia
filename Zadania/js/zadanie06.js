@@ -1,3 +1,34 @@
+// Dodatkowe rozwiązanie
+
+document.addEventListener("DOMContentLoaded", function(event)
+{
+    var button1=document.querySelector("#button-1");
+    var button2=document.querySelector("#button-2");
+    var button3=document.querySelector("#button-3");
+    var listAll =document.querySelector("ul");
+
+
+    button1.addEventListener("click",function(){
+        var newLi =document.createElement("li");
+        listAll.appendChild(newLi);
+        newLi.innerText="chleb";
+    });
+
+    button2.addEventListener("click",function(){
+        var lastEl =document.querySelector("ul li:last-child");
+        lastEl.parentElement.removeChild(lastEl);
+    });
+
+    button3.addEventListener("click",function(){
+        var toClone=document.querySelector("ul").children[1];
+        var newEl=toClone.cloneNode(true);
+        listAll.appendChild(newEl);
+    });
+
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function () {
     var buttons = document.querySelector('#buttons');
     var shoppingList = document.querySelector('#shopping-list');
