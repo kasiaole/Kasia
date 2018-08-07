@@ -1,3 +1,15 @@
+/*Zadanie5*/
+
+
+var button =document.querySelectorAll("button");
+var container =document.querySelector("#container");
+
+for (var i=0;i<button.length;i++){
+    button[i].addEventListener("click",function(){
+        container.innerText=this.dataset.text;
+    });
+}
+
 /************************************************************
  **** Rozwiązanie pierwsze (przypisanie poprzez tablice)****
  ************************************************************/
