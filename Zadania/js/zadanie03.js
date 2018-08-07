@@ -1,3 +1,27 @@
+// Dodatkowe rozwiązanie:
+
+function bigestSumOfTwoElements(array){
+    var sum =0;
+    var sortArray=[];
+
+    if (array.length<1){
+        return false;
+    }else{
+        sortArray = array.sort(function(a,b){
+            return b-a;
+    });}
+
+
+    if(sortArray.length>1){
+         return sum=sortArray[0]+sortArray[1];
+    }else if(sortArray.length=1){
+         return sum=sortArray[0];
+    }
+}
+
+bigestSumOfTwoElements([23,45,17,12]);
+
+
 /*********************************************
 ***** Rozwiązanie pierwsze (starego typu)*****
 **********************************************/
