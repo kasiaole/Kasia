@@ -1,6 +1,79 @@
 
+/*Zadanie 4*/
+
+/*1*/
+
+var allClass =document.querySelectorAll(".sample_class");
+
+function getTag(elements){
+    var tab=[];
+
+    for (var i=0;i<elements.length;i++){
+        tab.push(elements[i].tagName);
+    }
+
+    return tab;
+}
+
+getTag(allClass);
+
+/*2*/
+
+var sampleId =document.querySelector("#sample_id");
+
+function getClass(element){
+    var tab=[];
+
+    for (var i=0;i<element.classList.length;i++){
+        tab.push(element.classList[i]);
+    }
+
+    return tab;
+}
+
+getClass(sampleId);
+
+/*3*/
+
+var listEl =document.querySelectorAll(".sample_class_2 ul li");
+
+function getInnerText(elements){
+    var tab=[];
+
+    for (var i=0;i<elements.length;i++){
+        tab.push(elements[i].innerText);
+    }
+
+    return tab;
+}
+
+getInnerText(listEl);
+
+/*4*/
+
+var linksAll =document.querySelectorAll("[href]");
+
+function getAddress(elements){
+    var tab=[];
+
+    for (var i=0;i<elements.length;i++){
+        tab.push(elements[i].href);
+    }
+    return tab;
+}
+
+getAddress(linksAll);
+
+/*5*/
+
+var sampleClass3 =document.querySelector(".sample_class_3").children;
+
+getTag(sampleClass3);
+
+
 console.log('1. Szukanie nazw tagów');
 console.log('a)');
+
 
 /*********************************************
  ***** Rozwiązanie pierwsze (starego typu)*****
