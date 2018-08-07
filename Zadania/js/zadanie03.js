@@ -1,3 +1,26 @@
+// Dodatkowe rozwiązanie
+
+
+function bigestSumOfTwoElements(array){
+    var result = 0;
+     var sortedArray = array.sort(function(a,b){
+        return b-a
+    });
+     if (sortedArray.length === 1){
+        result = sortedArray[0];
+    } else if (sortedArray.length === 0) {
+        result = false;
+    } else {
+        result = sortedArray[0]+sortedArray[1];
+    }
+     return result;
+}
+
+
+
+
+
+
 /*********************************************
 ***** Rozwiązanie pierwsze (starego typu)*****
 **********************************************/
