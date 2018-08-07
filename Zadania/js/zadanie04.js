@@ -1,3 +1,54 @@
+// Dodatkowe rozwiązanie
+
+/*1*/
+var sampleClassElements = document.querySelectorAll('.sample_class');
+ function getTag(elements){
+    var classArray = [];
+     for (var i=0; i<elements.length; i++){
+        classArray.push(elements[i]);
+    }
+     return classArray;
+}
+ getTag(sampleClassElements);
+ /*2*/
+var sample = document.getElementById('sample_id');
+ function getClass(element){
+    var classArray = [];
+    var elementClasses = element.classList;
+     for (var i=0; i<elementClasses.length; i++){
+        classArray.push(elementClasses[i]);
+    }
+     return classArray;
+}
+ getClass(sample);
+ /*3*/
+var sampleClass2Elements = document.querySelectorAll('.sample_class_2 li');
+ function getInnerText(elements){
+    var innerTextArray = [];
+     for(var i=0; i<elements.length; i++){
+        innerTextArray.push(elements[i].innerText);
+    }
+     return innerTextArray;
+}
+ getInnerText(sampleClass2Elements);
+ /*4*/
+var links = document.querySelectorAll('a');
+ function getAddress(elements){
+    var linksURLS = [];
+     for(var i=0; i<elements.length; i++){
+        if (elements[i].hasAttribute('href')){
+            linksURLS.push(elements[i].getAttribute('href'));
+        }
+    }
+     return linksURLS;
+}
+ getAddress(links);
+ /*5*/
+var sampleClass3Children = document.querySelectorAll('.sample_class_3 > *');
+getTag(sampleClass3Children); 
+
+
+
 
 console.log('1. Szukanie nazw tagów');
 console.log('a)');
